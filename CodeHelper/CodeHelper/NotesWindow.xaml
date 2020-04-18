@@ -1,0 +1,26 @@
+﻿<Window x:Class="CodeHelper.NotesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeHelper"
+        mc:Ignorable="d"
+        Title="Список записок" Height="1000" Width="1920" WindowStartupLocation="CenterScreen" Background="#FF323232" WindowState="Maximized">
+    <Window.Resources>
+        <Style x:Key="noteBtn" TargetType="Button">
+            <Setter Property="Background" Value="#FF1D1D1D"></Setter>
+            <Setter Property="Foreground" Value="#FFFFEC94"></Setter>
+            <Setter Property="BorderBrush" Value="#FFFFD100"></Setter>
+            <Setter Property="Margin" Value="15"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <ScrollViewer Margin="10,50,10,10" Background="#FF1D1D1D" VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <WrapPanel x:Name="MainPanel" ItemWidth="200" ItemHeight="200">
+            </WrapPanel>
+        </ScrollViewer>
+        <Button x:Name="createBtn" Content="Создать" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderBrush="#FFFFD100" Background="#FF1D1D1D" Foreground="#FFFFEC94" Click="createBtn_Click"/>
+        <TextBox x:Name="searchBarBox" HorizontalAlignment="Left" Height="30" Margin="175,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center" Background="#FF1D1D1D" Foreground="#FFFFEC94" BorderBrush="#FFFFD100" TextChanged="searchBarBox_TextChanged"/>
+        <Label Content="Поиск:" HorizontalAlignment="Left" Margin="120,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFFFEC94" BorderBrush="#FFFFD100" Height="30" Width="50" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+    </Grid>
+</Window>
